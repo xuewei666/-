@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#3A50A6"
+        >
+
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:background="@drawable/timg"
+        android:layout_width="match_parent"
+        android:layout_height="130dp" />
+    <EditText
+        android:id="@+id/login_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="13521211212"
+        android:hint="用户名/手机号/邮箱"
+        android:layout_marginRight="5dp"
+
+        android:singleLine="true" />
+    <EditText
+        android:id="@+id/login_input_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:password="true"
+        android:text="123456"
+        android:hint="请输入密码"
+        android:layout_marginRight="5dp"
+
+        android:singleLine="true" />
+    <Button
+        android:id="@+id/login_input_denglu"
+        android:text="登录"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_margin="20dp"
+
+        android:background="@drawable/denglu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/login_input_register"
+        android:layout_marginLeft="50dp"
+        android:text="新用户注册"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/qq"
+        android:drawableTop="@drawable/qq"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#FAFAFA"
+        android:text="QQ一键登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

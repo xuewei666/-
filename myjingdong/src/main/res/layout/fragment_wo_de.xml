@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:background="@drawable/denglupng">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/wode_image"
+                        android:layout_width="50dp"
+                        fresco:roundedCornerRadius="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="50dp"
+                         />
+
+                    <TextView
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="50dp"
+                        android:text="登录/注册"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/wd_xiaoxi"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_xiaoxi_24dp" />
+
+                    <ImageView
+                        android:id="@+id/shezhi"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toLeftOf="@id/wd_xiaoxi"
+                        android:src="@drawable/shezhi" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <!--</LinearLayout>-->
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<include
+    android:id="@+id/include_sousuo"
+    layout="@layout/layout_sousuo"
+    />
+    <com.fyales.tagcloud.library.TagCloudLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:tagSpacing="15dp"
+        app:lineSpacing="10dp"></com.fyales.tagcloud.library.TagCloudLayout>
+    <Button
+        android:id="@+id/qingchu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除历史记录"
+        />
+</LinearLayout>

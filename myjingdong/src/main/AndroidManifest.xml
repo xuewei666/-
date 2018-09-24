@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bwei.com.myjd">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+
+        >
+
+        <!--
+        autolayout meta
+        配置设计图的宽高,配合AutoLauout控件使用,在设计图尺寸以外的其它尺寸手机上,也能达到和设计图一样的效果
+        注意: 本框架并不强制你使用 AutoLayout,如果你不想使用 AutoLayout,就不要配置下面的 meta-data
+        -->
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <!-- arms配置 -->
+        <meta-data
+            android:name="bwei.com.myjd.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+        <activity android:name=".mvp.ui.activity.MainActivity" />
+        <activity android:name=".mvp.ui.activity.ActivitySY">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.ui.activity.LoginActivitysActivity" />
+        <activity android:name=".mvp.ui.activity.RegisterActivity" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".mvp.ui.activity.SouSuoActivity" />
+        <activity android:name=".mvp.ui.activity.SouSuo2Activity" />
+        <activity android:name=".mvp.ui.activity.SPXQActivity" />
+        <activity android:name=".mvp.ui.activity.DingDanActivity" />
+        <activity android:name=".mvp.ui.activity.SettingActivity" />
+        <activity android:name=".mvp.ui.activity.AddressActivity" />
+        <activity android:name=".mvp.ui.activity.AddActivity" />
+        <activity android:name=".mvp.ui.activity.UpdataActivity"></activity>
+    </application>
+
+</manifest>

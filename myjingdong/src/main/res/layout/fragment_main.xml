@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#f00"
+        android:orientation="horizontal"
+
+
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/erweima"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/erweima_24dp" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:background="@drawable/sousuo"
+            android:hint="   雷神 笔记本">
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/xiaoxi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_xiaoxi_24dp" />
+
+    </LinearLayout>
+
+     <com.scwang.smartrefresh.layout.SmartRefreshLayout
+         android:id="@+id/smarter_fresh"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="18">
+         <!--<ScrollView-->
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:orientation="vertical"
+                 android:layout_height="match_parent">
+                <com.recker.flybanner.FlyBanner
+                    android:id="@+id/flybanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/ic_launcher_background"
+                    >
+                </com.recker.flybanner.FlyBanner>
+                 <android.support.v7.widget.RecyclerView
+
+                     android:id="@+id/recycler_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="#fff"
+                     android:overScrollMode="never"
+
+                     ></android.support.v7.widget.RecyclerView>
+                 <LinearLayout
+                     android:padding="10dp"
+                     android:gravity="center_vertical"
+                     android:layout_margin="10dp"
+                     android:orientation="horizontal"
+                     android:background="#FFF"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <TextView
+                         android:text="京东快报"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+                     <com.sunfusheng.marqueeview.MarqueeView
+                         android:id="@+id/marqueeView"
+                         android:layout_marginLeft="10dp"
+                         android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:layout_height="wrap_content"
+                         app:mvAnimDuration="1000"
+                         app:mvDirection="bottom_to_top"
+                         app:mvInterval="3000"
+                         app:mvTextColor="#000000"
+                         app:mvTextSize="14sp"
+                         app:mvSingleLine="true"/>
+                     <View
+                         android:layout_width="0.5dp"
+                         android:layout_marginTop="2dp"
+                         android:layout_marginBottom="2dp"
+                         android:background="#000000"
+                         android:layout_height="match_parent"/>
+
+                     <TextView
+                         android:layout_marginLeft="5dp"
+                         android:text="更多"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+                 </LinearLayout>
+
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="#7EDDFF"
+                         android:gravity="center"
+                         android:text="京东秒杀"
+                         android:textColor="#f00"
+                         android:textSize="20dp" />
+
+                     <android.support.v7.widget.RecyclerView
+
+                         android:id="@+id/JDMX_view"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                     </android.support.v7.widget.RecyclerView>
+
+
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="#fff"
+                     android:gravity="center"
+                     android:text="为你推荐"
+                     android:textColor="#f00"
+                     android:textSize="20dp" />
+                 <android.support.v7.widget.RecyclerView
+                     android:id="@+id/tuijian"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                 </android.support.v7.widget.RecyclerView>
+
+             </LinearLayout>
+         <!--</ScrollView>-->
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>
